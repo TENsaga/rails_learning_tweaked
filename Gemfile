@@ -28,11 +28,13 @@ group :development do
   gem 'listen',                '3.0.8'
   gem 'spring',                '1.7.2'
   gem 'spring-watcher-listen', '2.0.0'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
+  gem 'capybara', '~> 2.7'
   gem 'rails-controller-testing', '0.1.1'
-  gem 'rspec'
+  gem 'rspec-rails'
   gem 'rspec-nc'
   gem 'guard',                    '2.13.0'
   gem 'guard-rspec', require: false
