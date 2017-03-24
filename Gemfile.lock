@@ -404,7 +404,6 @@ DEPENDENCIES
   coffee-rails (= 4.2.1)
   faker (= 1.6.6)
   fog (= 1.38.0)
-  guard (= 2.13.0)
   guard-rspec
   jbuilder (= 2.4.1)
   jquery-rails (= 4.1.1)
