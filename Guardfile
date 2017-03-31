@@ -6,7 +6,7 @@ guard :rspec, cmd:"spring rspec --format=doc --format=Nc"  do
 
   # RSpec files
   rspec = dsl.rspec
-  watch(rspec.spec_helper) { rspec.spec_dir }
+  watch(rspec.spec_helper)  { rspec.spec_dir }
   watch(rspec.spec_support) { rspec.spec_dir }
   watch(rspec.spec_files)
 
@@ -35,6 +35,9 @@ guard :rspec, cmd:"spring rspec --format=doc --format=Nc"  do
   # Capybara features specs
   watch(rails.view_dirs)     { |m| rspec.spec.call("features/#{m[1]}") }
   watch(rails.layouts)       { |m| rspec.spec.call("features/#{m[1]}") }
+
+  # Monitor RSpec Changes
+  watch(%r{^spec/(.*)\/?(.*)_spec\.rb$})
 
   # Turnip features and steps
   watch(%r{^spec/acceptance/(.+)\.feature$})

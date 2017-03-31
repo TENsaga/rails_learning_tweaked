@@ -17,11 +17,55 @@ describe 'static_pages/home', type: :request do
       end
     end
 
-    describe 'verify title' do
-      before { visit contact_path }
+    describe 'site navigation for' do
+      describe 'root' do
+        before { visit root_path }
+        it 'returns status 200' do
+          expect(page).to have_http_status '200'
+        end
+        it 'has proper title' do
+          expect(page).to have_title(full_title)
+        end
+      end
 
-      it 'shows proper title' do
-        expect(page).to have_title(full_title('Contact'))
+      describe 'home' do
+        before { visit home_path }
+        it 'returns status 200' do
+          expect(page).to have_http_status '200'
+        end
+        it 'has proper title' do
+          expect(page).to have_title(full_title)
+        end
+      end
+
+      describe 'Contact' do
+        before { visit contact_path }
+        it 'returns status 200' do
+          expect(page).to have_http_status '200'
+        end
+        it 'has proper title' do
+          expect(page).to have_title(full_title('Contact'))
+        end
+      end
+
+      describe 'About' do
+        before { visit about_path }
+        it 'returns status 200' do
+          expect(page).to have_http_status '200'
+        end
+        it 'has proper title' do
+          expect(page).to have_title(full_title('About'))
+        end
+      end
+
+      describe 'Help' do
+        before { visit help_path }
+        it 'returns status 200' do
+          expect(page).to have_http_status '200'
+        end
+        it 'has proper title' do
+          expect(page).to have_title(full_title('Help'))
+        end
       end
     end
   end
