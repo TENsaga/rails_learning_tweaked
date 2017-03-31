@@ -1,9 +1,22 @@
 # Ruby on Rails Tutorial sample application
-
 This is the sample application for
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](http://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
+
+## Description
+Tweaked run-through of Hartl's Rails Guide - Modified testing for RSpec 
+
+### Utilizing: 
+* Rspec
+* Factory Girl
+* Faker
+* Capybara
+* Database Cleaner
+* Spring
+* Guard
+* Rubocop
+* RSpec-NC
 
 ## License
 

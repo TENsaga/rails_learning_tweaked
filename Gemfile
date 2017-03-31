@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',                       '~>5.0.1'
+gem 'rails',                       '~>5.0.2'
 gem 'bcrypt',                      '3.1.11'
 gem 'carrierwave',                 '0.11.2'
 gem 'mini_magick',                 '4.5.1'

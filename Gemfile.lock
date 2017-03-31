@@ -417,7 +417,7 @@ DEPENDENCIES
   listen (= 3.0.8)
   mini_magick (= 4.5.1)
   puma (= 3.4.0)
-  rails (~> 5.0.1)
+  rails (~> 5.0.2)
   rails-controller-testing (= 0.1.1)
   rspec-nc (~> 0.3.0)
   rspec-rails (~> 3.5.2)
