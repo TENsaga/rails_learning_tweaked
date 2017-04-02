@@ -1,50 +1,63 @@
 require 'rails_helper'
 
-describe 'site navigation', type: :request do
+describe 'site navigation for', type: :request do
   describe 'root' do
-    before { get root_path }
-    it 'has value success' do
-      expect(response).to be_success
+    before { visit root_path }
+    it 'returns status 200' do
+      expect(page).to have_http_status '200'
     end
-
-    it 'renders the home template' do
-      expect(response).to render_template(:home)
+    it 'has proper title' do
+      expect(page).to have_title(full_title)
     end
   end
 
   describe 'home' do
-    it 'has value success' do
-      get home_path
-      expect(response).to be_success
+    before { visit home_path }
+    it 'returns status 200' do
+      expect(page).to have_http_status '200'
     end
-  end
-
-  describe 'help' do
-    it 'has value success' do
-      get help_path
-      expect(response).to be_success
-    end
-  end
-
-  describe 'about' do
-    it 'has value success' do
-      get about_path
-      expect(response).to be_success
+    it 'has proper title' do
+      expect(page).to have_title(full_title)
     end
   end
 
   describe 'contact' do
-    it 'has value success' do
-      get contact_path
-      expect(response).to be_success
+    before { visit contact_path }
+    it 'returns status 200' do
+      expect(page).to have_http_status '200'
+    end
+    it 'has proper title' do
+      expect(page).to have_title(full_title('Contact'))
     end
   end
 
-  describe 'users#new' do
-    it 'has value success' do
-      get signup_path
-      expect(response).to be_success
+  describe 'about' do
+    before { visit about_path }
+    it 'returns status 200' do
+      expect(page).to have_http_status '200'
+    end
+    it 'has proper title' do
+      expect(page).to have_title(full_title('About'))
     end
   end
 
+  describe 'help' do
+    before { visit help_path }
+    it 'returns status 200' do
+      expect(page).to have_http_status '200'
+    end
+    it 'has proper title' do
+      expect(page).to have_title(full_title('Help'))
+    end
+  end
+
+  describe 'signup' do
+    before { visit signup_path }
+    it 'returns 200' do
+      expect(page).to have_http_status '200'
+    end
+    it 'has proper title' do
+      expect(page).to have_title(full_title('Sign up'))
+    end
+  end
 end
