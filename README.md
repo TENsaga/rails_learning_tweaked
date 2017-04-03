@@ -4,6 +4,8 @@ This is the sample application for
 Learn Web Development with Rails*](http://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
+## [Production - Live Site Demo](https://safe-woodland-14726.herokuapp.com/)
+
 ## Description
 Tweaked run-through of Hartl's Rails Guide - Modified testing for RSpec 
 
