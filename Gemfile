@@ -42,8 +42,8 @@ group :test do
   gem 'rails-controller-testing',  '0.1.1'
 end
 
-group :production do
-  gem 'pg',                         '0.18.4'
+group :production, :staging do
+  gem 'pg',                        '0.18.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
