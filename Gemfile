@@ -18,18 +18,18 @@ gem 'jbuilder',                    '2.4.1'
 gem 'rubocop',                     '~>0.47.1'
 
 group :development, :test do
-  gem 'rspec-rails',               '~>3.5.2'
-  gem 'sqlite3',                   '1.3.12'
   gem 'byebug',                    '9.0.0', platform: :mri
   gem 'factory_girl_rails'
+  gem 'rspec-rails',               '~>3.5.2'
+  gem 'sqlite3',                   '1.3.12'
 end
 
 group :development do
-  gem 'web-console',               '3.1.1'
   gem 'listen',                    '3.0.8'
   gem 'spring',                    '1.7.2'
   gem 'spring-watcher-listen',     '2.0.0'
   gem 'spring-commands-rspec',     '~>1.0.4'
+  gem 'web-console',               '3.1.1'
 end
 
 group :test do
@@ -39,11 +39,11 @@ group :test do
   gem 'rspec-nc',		               '~>0.3.0'
   gem 'guard-rspec',               '~>4.7.3', require: false
   #gem 'guard',                    '2.13.0'
-  gem 'rails-controller-testing', '0.1.1'
+  gem 'rails-controller-testing',  '0.1.1'
 end
 
 group :production do
-  #gem 'pg',   '0.18.4'
+  gem 'pg',                         '0.18.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
