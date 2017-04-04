@@ -424,7 +424,7 @@ DEPENDENCIES
   rspec-nc (~> 0.3.0)
   rspec-rails (~> 3.5.2)
   rubocop (~> 0.47.1)
-  sass-rails (= 5.0.6)
+  sass-rails (~> 5.0.6)
   spring (= 1.7.2)
   spring-commands-rspec (~> 1.0.4)
   spring-watcher-listen (= 2.0.0)

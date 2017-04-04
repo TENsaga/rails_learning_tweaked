@@ -18,6 +18,7 @@ RSpec.describe 'UsersSignups', type: :request do
       end.to_not change { User.count }
       expect(response.body).to include('Sign up')
       expect(response.body).to include('The form contains 4 errors.')
+      expect(session[:user_id]).to_not be_truthy
     end
   end
 
@@ -32,6 +33,7 @@ RSpec.describe 'UsersSignups', type: :request do
       follow_redirect!
       expect(response).to render_template('users/show')
       expect(flash[:success]).to eq 'Welcome to the Sample App!'
+      expect(session[:user_id]).to be_truthy
     end
   end
 end

@@ -2,6 +2,10 @@ require 'rails_helper'
 
 describe 'site layout', type: :request do
   describe 'GET root_path' do
+    it 'returns 200' do
+      get root_path
+      expect(response).to have_http_status(200)
+    end
     it 'renders the home template' do
       expect(get root_path).to render_template(:home)
     end
