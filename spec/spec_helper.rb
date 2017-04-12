@@ -1,4 +1,6 @@
 require 'capybara/rspec'
+require 'rack_session_access/capybara'
+
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
@@ -70,3 +72,4 @@ RSpec.configure do |config|
 =end
 
 end
+

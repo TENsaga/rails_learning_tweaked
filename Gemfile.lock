@@ -281,6 +281,9 @@ GEM
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack_session_access (0.1.1)
+      builder (>= 2.0.0)
+      rack (>= 1.0.0)
     rails (5.0.2)
       actioncable (= 5.0.2)
       actionmailer (= 5.0.2)
@@ -419,6 +422,7 @@ DEPENDENCIES
   mini_magick (= 4.5.1)
   pg (= 0.18.4)
   puma (= 3.4.0)
+  rack_session_access
   rails (~> 5.0.2)
   rails-controller-testing (= 0.1.1)
   rspec-nc (~> 0.3.0)

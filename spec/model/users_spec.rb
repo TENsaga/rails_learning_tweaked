@@ -93,4 +93,9 @@ describe User do
       end
     end
   end
+
+  it 'returns false if authenticated? for user with nil digest' do
+    user = FactoryGirl.create(:user, name: 'Jim Bob')
+    expect(user.authenticated?('')).to_not be_truthy
+  end
 end
